@@ -30,8 +30,8 @@
 1. Local run: ![The container when docker ps is run on the terminal](images/testing1-1.png), ![The website running on my browser](images/testing1-2.png)
 2. Repository secrets: ![The action secrets page](images/testing2.png)
 3. Main trigger: ![The successful workflow run](images/testing3.png)
-4. Branch negative test:
-5. Change to image: 
+4. Branch negative test: ![The workflow not starting on a non-main branch](images/testing4.png)
+5. Change to image: ![Changes made to the hmtl file changing the website](images/testing5.png)
 6. Tag trigger
 7. Tag negative test
 8. Tag set

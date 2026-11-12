@@ -27,8 +27,8 @@
         -
 
 **Testing and Proof**
-1. Local run
-2. Repository secrets: ![The main website page](images/testing2.png)
+1. Local run: ![The container when docker ps is run](images/testing1-1.png), ![The website running on my browser](images/testing1-2.png)
+2. Repository secrets: ![The action secrets page](images/testing2.png)
 3. Main trigger
 4. Branch negative test
 5. Change to image

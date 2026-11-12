@@ -7,7 +7,7 @@ on:
 env:
   DOCKER_HUB_REPO: aaronjrichardson/dockerfile
 jobs:
-  build&push:
+  build_and_push:
     name: Build docker image and push to Docker Hub
     runs-on: ubuntu-latest
     steps:

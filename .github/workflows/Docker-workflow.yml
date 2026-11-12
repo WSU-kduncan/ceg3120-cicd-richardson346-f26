@@ -5,7 +5,7 @@ on:
       - main
 # creating env instead of hard coding
 env:
-  DOCKER_HUB_REPO: aaronjrichardson/dockerfile
+  DOCKER_HUB_REPO: dockerfile
 jobs:
   build_and_push:
     name: Build docker image and push to Docker Hub

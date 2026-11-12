@@ -31,7 +31,7 @@
 2. Repository secrets: ![The action secrets page](images/testing2.png)
 3. Main trigger: 
 4. Branch negative test:
-5. Change to image
+5. Change to image: 
 6. Tag trigger
 7. Tag negative test
 8. Tag set

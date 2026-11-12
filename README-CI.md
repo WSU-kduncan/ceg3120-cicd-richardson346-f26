@@ -28,7 +28,7 @@
 
 **Testing and Proof**
 1. Local run
-2. Repository secrets
+2. Repository secrets: ![The main website page](images/testing2.png)
 3. Main trigger
 4. Branch negative test
 5. Change to image

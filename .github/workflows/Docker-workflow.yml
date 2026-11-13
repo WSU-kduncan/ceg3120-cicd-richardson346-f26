@@ -37,8 +37,6 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v7.4.0
         with:
-          context: .
           file: ./web-content/Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:latest

@@ -1,9 +1,3 @@
-1. Continuous Integration Project Overview
-    - The goal of this project is to
-    - The tools used in this project include Docker, 
-
-2. Resources
-    -
 
 **Part 1 Documentation**
     - The website is a catalog of gaming laptops with an explanation of their specifications. [The main website page](web-content/catalog.html). [The index of available laptops](web-content/index.html). [The style specifications for the website](web-content/style.css)
@@ -25,6 +19,18 @@
         - To test my workflow I
         -
         -
+
+
+** Part 3 **
+
+**Part 4 documentation**
+1. Continuous Integration Project Overview
+    - The goal of this project is to create a guthub repository with proper versioning as it updates a website
+    - The tools used in this project include Docker to host the image as it is updated.  
+
+2. Resources
+    -
+
 
 **Testing and Proof**
 1. Local run: ![The container when docker ps is run on the terminal](images/testing1-1.png), ![The website running on my browser](images/testing1-2.png)

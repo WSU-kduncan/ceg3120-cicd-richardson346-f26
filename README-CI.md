@@ -32,7 +32,7 @@
 3. Main trigger: ![The successful workflow run](images/testing3.png)
 4. Branch negative test: ![The workflow not starting on a non-main branch](images/testing4.png)
 5. Change to image: ![Changes made to the hmtl file changing the website](images/testing5.png)
-6. Tag trigger
+6. Tag trigger: 
 7. Tag negative test
 8. Tag set
 9. Two releases

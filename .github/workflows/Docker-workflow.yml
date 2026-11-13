@@ -5,7 +5,7 @@ on:
       - 'v*.*.*'
 # creating env instead of hard coding
 env:
-  DOCKER_HUB_REPO: dockerfile
+  DOCKER_HUB_REPO: aaronjrichardson/dockerfile
 jobs:
   build_and_push:
     name: Build docker image and push to Docker Hub
@@ -37,6 +37,8 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v7.4.0
         with:
+          context: .
           file: ./web-content/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:latest
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

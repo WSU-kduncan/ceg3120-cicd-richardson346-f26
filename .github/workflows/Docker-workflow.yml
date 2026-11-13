@@ -28,7 +28,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}
-          tags: 
+          tags: |
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=raw,value=latest
@@ -37,6 +37,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v7.4.0
         with:
+          context: .
           file: ./web-content/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}

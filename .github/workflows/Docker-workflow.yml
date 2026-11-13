@@ -1,8 +1,8 @@
 name: Docker-Login-Build-Push
 on:
   push:
-    branches: 
-      - main
+    tags:
+      - 'v*.*.*'
 # creating env instead of hard coding
 env:
   DOCKER_HUB_REPO: dockerfile
@@ -22,6 +22,16 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
+
+      - name: metadata tags
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}
+          tags: 
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=latest
       
       - name: Push to Docker Hub
         id: docker_build
@@ -29,4 +39,5 @@ jobs:
         with:
           file: ./web-content/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:latest
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

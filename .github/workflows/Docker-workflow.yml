@@ -27,7 +27,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v6.2.0
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}
+          images: ${{ env.DOCKER_HUB_REPO }}
           tags: |
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}

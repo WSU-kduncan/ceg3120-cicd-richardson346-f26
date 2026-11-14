@@ -42,6 +42,7 @@
 1. Continuous Integration Project Overview
     - The goal of this project is to create a guthub repository with proper versioning as it updates a website
     - The tools used in this project include Docker to host the image as it is updated. The actions checkout, setup-buildx-action, login-action, metadata-action, and build-push-action.
+    - ![The Diagram of the repository functions](images/project6-diagram.png)
 
 **Blockers**
 - Despite attempts to complete part 3 of the assignment following the guidance of the metadata actions repository I could not figure out why the website would not update to reflect the changes made. I attempted changing which image the workflow went to, if it was pushing to the right image, and redownloading the image but I could not figure out what was wrong.

@@ -40,7 +40,7 @@ jobs:
         uses: docker/build-push-action@v7.4.0
         with:
           context: .
-          file: ./web-content/Dockerfile
+          file: ././web-content/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ env.DOCKER_HUB_REPO }}
+          labels: ${{ steps.meta.outputs.labels }}

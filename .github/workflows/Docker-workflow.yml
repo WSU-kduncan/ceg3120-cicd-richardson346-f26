@@ -27,7 +27,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v6.2.0
         with:
-          images: ${{ env.DOCKER_HUB_REPO }}
+          images: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -43,4 +43,4 @@ jobs:
           file: ./web-content/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          labels: ${{ env.DOCKER_HUB_REPO }}
